@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    
+</head>
+
+
+
+<body >
+    <style>
+
+        .mittig {
+            text-align: center;
+
+        }
+
+        .background-dark {
+            background-color: black;
+        }
+        
+        .center {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .center-2 {
+            display: flex;
+            justify-content: right;
+        }
+
+        .center-3 {
+            display: flex;
+            justify-content: left;
+        }
+
+        .margin-top {
+            margin-top: 50px;
+        }
+        
+        .margin-top-2 {
+            margin-top: 50px;
+        }
+
+        .margin-top-3 {
+            margin-top: 20px;
+        }
+
+        .timer {
+            font-size: 30px;
+            color: white;
+            font-family:  'VT323', monospace;
+        }
+
+        .timer-2 {
+            font-size: 50px;
+            color: white;
+            font-family: 'VT323', monospace;
+        }
+
+        
+        .timer-3 {
+            font-size: 36px;
+            color: white;
+            font-family: 'VT323', monospace; 
+        }
+
+        .timer-4 {
+            font-size: 33px;
+            color: white;
+            font-family: 'VT323', monospace; 
+        }
+
+        .timer-5 {
+            font-size: 40x;
+            color: white;
+            font-family: 'VT323', monospace; 
+        }
+
+    </style>
+
+<style> @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap'); </style>
+
+    <script>
+
+
+  let alarm = new Audio('ala.mp3');
+        let timerStarted = false;
+
+        
+        function startTimer() {
+            if (!timerStarted) {
+                let startTime = new Date().getTime();
+                let fiveMinutes = 1000 * 60 * 30;
+                let endTime = startTime + fiveMinutes;
+
+                setTimeout(function() {
+      window.open("gameover.html");
+    }, 30*60000);
+
+                setInterval(function() {
+                    let timeLeft = endTime - new Date().getTime();
+
+
+                    if (timeLeft > 0) {
+                        let minutes = timeLeft / (1000 * 60);
+                        minutes = Math.floor(minutes);
+                        let seconds = (timeLeft / 1000) % 60;
+                        seconds = Math.round(seconds);
+                        seconds = ('0' + seconds).slice(-2);
+                        let text =   minutes  +  ' : '  +  seconds;
+                        timer.innerHTML = text;
+                        
+                    
+        
+                        
+
+                    } else {
+                        alarm.play();
+                        timer.innerHTML = '00 : 00';
+                    }
+                }, 1000);
+                timerStarted = true;
+            }
+        }
+                    
+        
+                        
+
+                    
+    </script>
+
+</head>
+
+
+
+<body class="background-dark">
+    
+    
+    <script>
+        function fensterOeffnen2() { 
+            window.open('menu.html');
+          }
+        </script>
+
+    <div class="center margin-top timer">
+        Lvl.7
+    </div>
+
+   
+  
+     <div class="mittig margin-top timer-3">
+    ———————————————————————
+    Get the Challenge done!    
+    ———————————————————————
+    </div>
+
+ <div class="mittig margin-top-3 timer-4" id="random-question">  </div>
+    
+ 
+    
+    <Script>
+      const questions = [
+       '"Ruf deine Eltern an und atme ins Telefon"',
+       '"Ruf deinen Crush an📞"',
+       '"Ruf deinen Crush an📞"',
+       '"Mach dir Eiswürfel in den Ausschnitt🧊"',
+       '"Mach dir Eiswürfel in den Ausschnitt🧊"',
+       '"Trinke 1 Shot ohne ein Gesicht zu verziehen. Nicht geschafft? Nimm noch einen!🥃"',
+       '"Poste ein Baby-Ultraschallbild in deiner Story!👶"',
+       '"Frage jmd nach einem Kondom🍆"',
+       '"Frage jmd nach einem Kondom🍆"',
+       '"Halte mit jmd Blickkontakt👁️"',
+       '"Starte eine Runde Bierpong🏓"',
+       '"Gehe das nächste Mal draußen auf Toilette🚽"',
+       '"Zieh dein Klamotten verkehrt herum an👕"',
+       '"Poste ein Selfie vom Klo🤳"', 
+       '"Joker🃏"',
+       '"Du darfst eine Person bestimmen, die 2 Shots trinken muss🥃"',
+       '"Trage ein "Tritt-Mich-Schild" für die nächste halbe Stunde"',
+       '"Adde eine random Person auf Snap und schreibe ihr einen Anmachspruch"',
+       '"Mache einen Song in die Warteschlange!"',
+       '"Flirte einen Mitspieler/in deiner Wahl an, so als wäre er/sie der Heißeste Typ/Mädchen, den du je gesehen hast."',
+       '"Ruf ganz laut:"Can I get a hayaaaa?" "',
+       '"Mache heimlich ein lustiges Foto von einer Person📷"',
+       '"Reagiere auf die ersten 5 Instastorys mit einem Herz❤️"',
+       '"Poste eine Story und verlinke den Acc von GTCD"',
+       '"Poste deinen Scuhverlauf!"',
+       '"Mach ein lautes Stöhngeräusch!"',
+       '"Mach ein lautes Stöhngeräusch!"',
+       '"Mache ein Selfie von der Gruppe und poste es!"',
+       '"Mache dir eine Mische ohne deine Hände zu benutzen!"',
+       '"Trinke 2 Shots🥃"',
+       '"Trink dein jetziges Getränk auf ex🥤"',
+       '"Iss 3 Centershocks auf einmal🍬"',
+       '"Entzünde den Tornado🌪️"',
+       '"Gib jedem der dich danach fragt eine Kippe von dir. Wenn du keine hast, hast du Glück🚬"',
+       '"Shotgun a beer🍺"',
+       '"Stell dich für eine Minute in die Ecke!"',
+       '"Poste dein letzes Bild aus der Galerie in deiner Story📷"',
+       '"Umarme eine Person im Raum🫂"',
+       '"Zeichne das Haus vom Nikolaus🎅. Du hast 1 Versuch. Schaffst du des nicht nimm eien Shot"', 
+       '"Du darfst eine Person bestimmen, die einen Shot trinken muss🥃"',
+       '"Mache einen Song in die Warteschlange auf Spotify🔊"',
+       '"Frage 5 Leute. Jeder macht ein Getränk in deinen Becher. Trink dann deine neue Mische.🥤"',
+       '"Nimm einen Teelöffel Tabasco🌶️"',
+       '"Das Nächste was du isst, musst du ohne Hände essen"',
+       '"Trinke einer Person deiner Wahl aus dem Bauchnabel!"',
+       '"Laufe eimal in Unterwäsche durchs Haus🩲"',
+       '"Gib einer Person einen Kuss💋"',
+       '"Such dir jmd aus den du erotisch massieren darfst!"',
+       '"Lass dir von einer Person deiner Wahl einen Knutschfleck verpassen💋"',
+       '"Führe einer Person den perfekten Blowjob mit einem Gegenstand deiner Wahl vor!"',
+       '"Twerke für eine Person deiner Wahl!"',
+       '"Trockenvögeln mit einem Möbelstück!"',
+       '"Gib einer Person einen Lapdance!"',
+
+
+        
+
+      ];
+
+      
+      const randomIndex = Math.floor(Math.random() * questions.length);
+
+      
+      const chosenQuestion = questions[randomIndex];
+
+      
+      const element = document.getElementById('random-question');
+
+      
+      element.textContent = chosenQuestion;
+    
+    
+      
+    
+    
+    </script> 
+   
+   
+   
+
+  
+    
+   
+ 
+
+    <div class="center margin-top-2 timer-2" id="timer">30 : 00</div>
+
+    <div class="center margin-top-3">
+        <img width="120px" height="70px" onclick="startTimer()" src="img/start.png">
+    </div>
+
+    
+
+    <div class="center margin-top-2 ">
+        <img width="75px" height="75px" hspace="20px" onclick="fensterOeffnen()"  src="img/haken.png">
+        <img width="70px" height="70px" hspace="20px" onclick="fensterOeffnen3()" src="img/kreuz.png">
+    </div>
+
+    <script>
+    function fensterOeffnen() { 
+        window.open('winner.html');
+      }
+    </script>
+
+    <script>
+    function fensterOeffnen3() { 
+        window.open('gameover.html');
+      }
+    </script>
+
+
+
+</body>
+</html>

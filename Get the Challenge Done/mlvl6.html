@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    
+</head>
+
+
+
+<body>
+    <style>
+
+        .mittig {
+            text-align: center;
+
+        }
+
+        .background-dark {
+            background-color: black;
+        }
+        
+        .center {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .center-2 {
+            display: flex;
+            justify-content: right;
+        }
+
+        .center-3 {
+            display: flex;
+            justify-content: left;
+        }
+
+        .margin-top {
+            margin-top: 50px;
+        }
+        
+        .margin-top-2 {
+            margin-top: 50px;
+        }
+
+        .margin-top-3 {
+            margin-top: 20px;
+        }
+
+        .timer {
+            font-size: 30px;
+            color: white;
+            font-family:  'VT323', monospace;
+        }
+
+        .timer-2 {
+            font-size: 50px;
+            color: white;
+            font-family: 'VT323', monospace;
+        }
+
+        
+        .timer-3 {
+            font-size: 36px;
+            color: white;
+            font-family: 'VT323', monospace; 
+        }
+
+        .timer-4 {
+            font-size: 33px;
+            color: white;
+            font-family: 'VT323', monospace; 
+        }
+
+        .timer-5 {
+            font-size: 40x;
+            color: white;
+            font-family: 'VT323', monospace; 
+        }
+
+    </style>
+
+<style> @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap'); </style>
+
+    <script>
+
+
+  let alarm = new Audio('ala.mp3');
+        let timerStarted = false;
+
+        
+        function startTimer() {
+            if (!timerStarted) {
+                let startTime = new Date().getTime();
+                let fiveMinutes = 1000 * 60 * 30;
+                let endTime = startTime + fiveMinutes;
+
+                setTimeout(function() {
+      window.open("gameover.html");
+    }, 30*60000);
+
+                setInterval(function() {
+                    let timeLeft = endTime - new Date().getTime();
+
+
+                    if (timeLeft > 0) {
+                        let minutes = timeLeft / (1000 * 60);
+                        minutes = Math.floor(minutes);
+                        let seconds = (timeLeft / 1000) % 60;
+                        seconds = Math.round(seconds);
+                        seconds = ('0' + seconds).slice(-2);
+                        let text =   minutes  +  ' : '  +  seconds;
+                        timer.innerHTML = text;
+                        
+                    
+        
+                        
+
+                    } else {
+                        alarm.play();
+                        timer.innerHTML = '00 : 00';
+                    }
+                }, 1000);
+                timerStarted = true;
+            }
+        }
+                    
+        
+                        
+
+                    
+    </script>
+
+</head>
+
+
+
+<body class="background-dark">
+    
+    
+    <script>
+        function fensterOeffnen2() { 
+            window.open('menu.html');
+          }
+        </script>
+
+    <div class="center margin-top timer">
+        Lvl.6
+    </div>
+
+   
+  
+     <div class="mittig margin-top timer-3">
+    ———————————————————————
+    Get the Challenge done!    
+    ———————————————————————
+    </div>
+
+ <div class="mittig margin-top-3 timer-4" id="aufgabe">  </div>
+    
+ 
+    
+ <p id="aufgabe"></p>
+ <script>
+   
+   const personen = ['Nici','Domi','Janina','Svea','Josh','Lea','Emily W.','Jolina','Amelie','Nini','Lena','Charlotte','Lenny','Stefan W.','Antonia','Aemilian','Stefan G.' ];
+
+   
+   const aufgaben = [
+   'Gib einer Person einen Slap auf den Po',
+    'Gib einer Person eine kurze Massage💆',
+    'Schicke ein heißes Bild an eine Person',
+    'Mache ein erotisches Foto mit einer Person',
+    'Gib einer Person einen Kuss auf die Wange😗',
+    'Frage eine Person nach einem Date👫',
+    'Mache ein Couplebild mit einer Person und poste es in deiner Story🤳',
+    'Mache einer Person einen Heiratsantrag💍',
+    'Setz dich bei einer Person auf den Schoß',
+    'Halte 2min Händchen mit einer Person🤝',
+    'Joker🃏',
+    'Lass dir von einer Person etwas ins Gesicht malen🖌️',
+    'Lass dir von einer Person etwas ins Gesicht malen🖌️',  
+    'Gib einer Person eine Umarmung🫂', 
+    'Eine Person darf für die nächsten 24h dein Profilbild bestimmen🖼️',
+    'Nimm für den Rest des Abends immer eine Person mit aufs Klo🧻',
+    'Spiele mit einer Person eine Runde Flaschendrehen und stellt euch gegenseitig Aufgaben🍾',
+    'Du darfst eine Person schminken💄',
+    'Eine Person darf deine Instastory machen📷',
+    'Tausche mit einer Person Oberteile👕',
+    'Mache einer Person eine Mische🥤',
+    'Mache einer Person eine Mische🥤',
+    'Versuche irgendeinen Gegenstand an eine Person zu verkaufen💶',
+    'Frage eine Person: 🍒oder🍑',
+    'Taste eine Person nach Waffen ab🔫',
+    'Tausche Handys mit einer Person📱',
+    'Joker🃏',
+    'Mache einer Person ein Kompliment',
+    'Spiele mit einer Person Schere-Stein-Papier. Der Verlierer wird bestraft✂️🪨📃',
+    'Zeige einer Person deinen letzten Tiktok-Entwurf',
+    'Lass eine Person deiner Wahl deinen Instanamen ändern',
+    'Spiele mit einer Person Daumenwrestling',
+    'Sei für 5min der Butler einer Person',
+    'Trinke einen Shot aus dem Bauchnabel einer Person🥤',
+    'Starte einen Verführungsversuch bei einer Person',
+   ]
+    
+    
+
+   
+   const personIndex = Math.floor(Math.random() * personen.length);
+   const person = personen[personIndex];
+
+   
+   const aufgabeIndex = Math.floor(Math.random() * aufgaben.length);
+   const aufgabe = aufgaben[aufgabeIndex];
+
+   
+   document.getElementById('aufgabe').innerHTML = `  "${aufgabe}. Diese Person ist: ${person}"`;
+   
+   </script>
+
+  
+    
+   
+ 
+
+    <div class="center margin-top-2 timer-2" id="timer">30 : 00</div>
+
+    <div class="center margin-top-3">
+        <img width="120px" height="70px" onclick="startTimer()" src="img/start.png">
+    </div>
+
+    
+
+    <div class="center margin-top-2 ">
+        <img width="75px" height="75px" hspace="20px" onclick="fensterOeffnen()"  src="img/haken.png">
+        <img width="70px" height="70px" hspace="20px" onclick="fensterOeffnen3()" src="img/kreuz.png">
+    </div>
+
+    <script>
+    function fensterOeffnen() { 
+        window.open('mlvl7.html');
+      }
+    </script>
+
+    <script>
+    function fensterOeffnen3() { 
+        window.open('gameover.html');
+      }
+    </script>
+
+
+
+</body>
+</html>
